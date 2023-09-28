@@ -6,7 +6,9 @@
         $password = $_POST["password"];
  
         // connect with database
-        $conn = mysqli_connect("localhost:8889", "root", "root", "test");
+       
+        $conn = mysqli_connect("localhost", "gentlebo_myapp1", "MyJolomi97#", "gentlebo_myapp");
+        
  
         // check if credentials are okay, and email is verified
         $sql = "SELECT * FROM users WHERE email = '" . $email . "'";
@@ -42,13 +44,17 @@
 </head>
 
 <body>
-
-
-<form method="POST">
-    <input type="email" name="email" placeholder="Enter email" required />
-    <input type="password" name="password" placeholder="Enter password" required />
+<br><br><br>
+<div style="text-align: center;">
+    <form method="POST">
+    <input type="email" name="email" placeholder="Enter email" required /> <br><br>
+    <input type="password" name="password" placeholder="Enter password" required /> <br><br>
  
     <input type="submit" name="login" value="Login">
-</form>
+</form><br><br>
+
+<a href="register.php">Register Now</a>
+</div>
+
 </body>
 </html>
