@@ -30,17 +30,17 @@
             $mail->isSMTP();
  
             //Set the SMTP server to send through
-            $mail->Host = 'mail.avinice.com.ng';
+            $mail->Host = 'mail.gentleboard.org';
  
             //Enable SMTP authentication
             $mail->SMTPAuth = true;
  
             //SMTP username
-            $mail->Username = 'app@avinice.com.ng';
+            $mail->Username = 'app@gentleboard.org';
             // $mail->Username = 'jollofdudu@gmail.com';
  
             //SMTP password
-            $mail->Password = 'Avinice23!20LS';
+            $mail->Password = 'MyJolomi97#';
  
             //Enable TLS encryption;
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
@@ -51,7 +51,7 @@
             $mail->Port = 465;
  
             //Recipients
-            $mail->setFrom('app@avinice.com.ng', 'Avinice Logistics Ltd');
+            $mail->setFrom('app@gentleboard.org', 'Myer Logistics Ltd');
             
              
  
@@ -72,9 +72,8 @@
             $encrypted_password = password_hash($password, PASSWORD_DEFAULT);
  
             // connect with database
-            // $conn = mysqli_connect("localhost", "root", "", "akada");
 
-            $conn = mysqli_connect('localhost', 'avinicec_delivery2', 'MyAvinice2*30.Deli', 'avinicec_delivery');
+            $conn = mysqli_connect("localhost", "gentlebo_myapp1", "MyJolomi97#", "gentlebo_myapp");
 
 
  
@@ -97,12 +96,20 @@
     <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-<form method="POST">
-    <input type="text" name="name" placeholder="Enter name" required />
-    <input type="email" name="email" placeholder="Enter email" required />
-    <input type="password" name="password" placeholder="Enter password" required />
+    <br><br><br>
+    <div style="text-align:center;">
+        
+        <form method="POST">
+    <input type="text" name="name" placeholder="Enter name" required /> <br><br>
+    <input type="email" name="email" placeholder="Enter email" required /><br><br>
+    <input type="password" name="password" placeholder="Enter password" required /><br><br>
  
     <input type="submit" name="register" value="Register">
-</form>
+</form><br><br>
+
+<a href="./">Back to login</a>
+        
+    </div>
+
 </body>
 </html>
